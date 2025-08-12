@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="icon" type="image/png" href="/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>BMCAR | Lava Rápido em Jandira | Agende Sua Lavagem</title>
-    
     <meta name="description" content="Procurando Lava Rápido em Jandira? ✨ Na BMCAR, oferecemos lavagem completa, higienização e mais! Cuidado e agilidade para seu carro. Agende agora!">
-    
+    <meta property="og:type" content="website">
+<meta property="og:url" content="https://bmcarlavarapido.netlify.app/">
+<meta property="og:title" content="BMCAR | Lava Rápido em Jandira | Agende Sua Lavagem">
+<meta property="og:description" content="Procurando Lava Rápido em Jandira? ✨ Na BMCAR, oferecemos lavagem completa, higienização e mais! Cuidado e agilidade para seu carro. Agende agora!">
+<meta property="og:image" content="https://bmcarlavarapido.netlify.app/imagens/bmcar-fundo-hero.png">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://bmcarlavarapido.netlify.app/">
+<meta property="twitter:title" content="BMCAR | Lava Rápido em Jandira | Agende Sua Lavagem">
+<meta property="twitter:description" content="Procurando Lava Rápido em Jandira? ✨ Na BMCAR, oferecemos lavagem completa, higienização e mais! Cuidado e agilidade para seu carro. Agende agora!">
+<meta property="twitter:image" content="https://bmcarlavarapido.netlify.app/imagens/bmcar-fundo-hero.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8L6YXS5N7"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -16,17 +24,12 @@
       gtag('js', new Date());
       gtag('config', 'G-Y8L6YXS5N7');
     </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -53,7 +56,7 @@
        "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
-        "reviewCount": "4"
+        "reviewCount": "61"
       },
       "openingHoursSpecification": [
         {
@@ -71,7 +74,6 @@
       ]
     }
     </script>
-
     <style>
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #f0f2f5; }
     </style>
@@ -79,60 +81,47 @@
 <body class="text-gray-800">
 
     <main class="p-4 mx-auto w-full max-w-screen-2xl">
-        <section id="home" class="relative text-white rounded-2xl shadow-lg overflow-hidden min-h-[300px] flex items-end">
-            <div class="absolute inset-0">
-                <picture>
-                    <img src="imagens/bmcar-fundo-hero.png" alt="Carro amarelo esportivo sendo limpo no lava-rápido BMCAR" class="w-full h-full object-cover">
-                </picture>
-                <div class="absolute inset-0 bg-black opacity-50"></div>
-            </div>
+  <!-- HERO REFINADO COM ÍCONE DO INSTAGRAM CLICÁVEL -->
+<section id="home" class="relative text-white rounded-2xl shadow-lg overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="imagens/bmcar-fundo-hero.png" alt="Carro amarelo desportivo a ser limpo no lava-rápido BMCAR" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+    </div>
+    
+    <!-- O ÍCONE AGORA ESTÁ DENTRO DE UM LINK (tag <a>) E FUNCIONA -->
+    <a href="https://www.instagram.com/lavarapidobmcar" target="_blank" class="absolute top-6 right-6 text-white hover:text-yellow-400 transition-colors" aria-label="Siga-nos no Instagram">
+        <i data-lucide="instagram" class="w-7 h-7"></i>
+    </a>
 
-            <div class="relative z-10 p-6 w-full">
-                <div class="flex flex-col">
-                    <div class="flex items-center">
-                        <img src="imagens/bmcar-logo.png" alt="Logo da BMCAR Lava Rápido" class="h-24 w-auto">
-                        <h1 class="font-black tracking-tight text-3xl sm:text-4xl md:text-5xl ml-4">
-                            Lava Rápido em <span class="text-yellow-400">Jandira</span>
-                        </h1>
-                    </div>
-                    <p class="text-gray-200 mt-2 max-w-prose text-sm sm:text-base">O cuidado que seu carro merece, com a agilidade que você precisa.</p>
-                </div>
-                <div class="mt-6 sm:mt-8 flex justify-start">
-                    <a href="https://wa.me/5511933167736?text=Ol%C3%A1%21%20Gostaria%20de%20fazer%20um%20agendamento%20r%C3%A1pido." target="_blank" class="text-center bg-yellow-400 text-black font-bold py-3 px-5 rounded-lg hover:bg-yellow-500 transition-all flex items-center justify-center gap-2">
-                        <i data-lucide="calendar-check" class="w-5 h-5" aria-hidden="true"></i>
-                        Agendar Agora
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-4 bg-white rounded-2xl shadow-md p-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm flex-wrap">
-            <div class="flex items-center gap-4 flex-wrap">
-                <div class="flex items-center gap-2 font-semibold flex-shrink-0">
-                    <span id="status-indicator" class="w-3 h-3 rounded-full"></span>
-                    <span id="status-text"></span>
-                </div>
-                <div id="hours-info" class="flex items-center gap-2 text-gray-600 flex-shrink-0">
-                    <i data-lucide="clock" class="w-4 h-4" aria-hidden="true"></i>
-                    <span id="today-hours"></span>
-                </div>
-            </div>
-            
-            <div class="flex items-center gap-4 mt-4 md:mt-0">
-                <a href="https://maps.app.goo.gl/r6rG3Bq5q4Yg3R517" target="_blank" class="flex items-center gap-2 text-yellow-500 hover:text-yellow-600 font-semibold flex-shrink-0">
-                    <i data-lucide="map-pin" class="w-4 h-4" aria-hidden="true"></i>
-                    <span>Ver no mapa</span>
-                </a>
-            </div>
-        </section>
+    <div class="relative z-10 p-6 min-h-[350px] flex flex-col justify-end">
+        <div class="flex justify-start items-end gap-4">
+    <img src="imagens/bmcar-logo.png" alt="Logótipo da BMCAR Lava Rápido" class="h-20 w-auto md:h-24">
+    <h1 class="font-black tracking-tight text-3xl sm:text-4xl md:text-5xl">
+        Lava Rápido em <span class="block text-yellow-400">Jandira</span>
+    </h1>
+</div>
+        <p class="text-gray-200 mt-2 max-w-prose text-sm sm:text-base">O cuidado que seu carro merece, com a agilidade que você precisa.</p>
+        <div class="mt-6 sm:mt-8">
+            <a href="https://wa.me/5511933167736?text=Ol%C3%A1%21%20Gostaria%20de%20fazer%20um%20agendamento%20r%C3%A1pido." target="_blank" class="text-center bg-yellow-400 text-black font-bold py-3 px-5 rounded-lg hover:bg-yellow-500 transition-all flex items-center justify-center gap-2 w-full sm:w-auto sm:max-w-xs">
+                <i data-lucide="calendar-check" class="w-5 h-5" aria-hidden="true"></i>
+                Agendar Agora
+            </a>
+        </div>
+        <!-- STATUS DE HORÁRIO INTEGRADO AO HERO -->
+        <div id="hero-status-info" class="mt-4 flex items-center gap-2 text-sm font-semibold">
+            <span id="hero-status-indicator" class="w-3 h-3 rounded-full flex-shrink-0"></span>
+            <span id="hero-status-text"></span>
+        </div>
+    </div>
+</section>
+        <!-- A BARRA DE STATUS ANTIGA FOI REMOVIDA -->
 
         <section id="services" class="mt-8">
             <div class="text-left mb-6">
                 <h2 class="text-3xl font-bold">Nossos Serviços</h2>
                 <p class="text-sm text-gray-400 mt-1">Clique para saber mais</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-title="Ducha" data-price="a partir de R$ 20,00" data-details='["Lavagem externa completa", "Secagem com flanela", "Aplicação de pneu pretinho"]'>
                     <i data-lucide="shower-head" class="w-10 h-10 text-yellow-500 flex-shrink-0" aria-hidden="true"></i>
                     <div>
@@ -178,7 +167,7 @@
             </div>
         </section>
 
-        <section class="mt-12">
+        <section id="team" class="mt-12">
             <div class="bg-white rounded-2xl shadow-md p-8 text-center">
                 <i data-lucide="user-check" class="w-12 h-12 mx-auto text-yellow-500" aria-hidden="true"></i>
                 <h2 class="text-3xl font-bold mt-4">Faça Parte da Nossa Equipe</h2>
@@ -189,10 +178,10 @@
             </div>
         </section>
 
-        <section class="mt-12 bg-white rounded-2xl shadow-md p-8 text-center">
+        <section id="partners" class="mt-12 bg-white rounded-2xl shadow-md p-8 text-center">
             <h2 class="text-3xl font-bold">Soluções para Empresas e Parceiros</h2>
             <p class="text-gray-500 mt-1 max-w-prose mx-auto">Condições especiais para o seu negócio.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
                  <button class="partner-card p-6 shadow-md text-center w-full hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-whatsapp-msg="Olá! Gostaria de saber mais sobre as condições para preparação de veículos para venda.">
                     <i data-lucide="tag" class="w-10 h-10 mx-auto text-yellow-500" aria-hidden="true"></i>
                     <h3 class="font-bold text-lg mt-3">Venda de Veículos</h3>
@@ -211,35 +200,53 @@
             </div>
         </section>
 
-        <footer class="mt-12 bg-black text-white rounded-2xl p-8 text-center">
-            <div class="max-w-md mx-auto">
-                <div class="flex items-center justify-center gap-3 mb-4">
-                   <img src="imagens/bmcar-logo.png" alt="Logo circular da BMCAR Lava Rápido em Jandira" class="h-28">
-                        </div>
-                <p class="mt-4 text-gray-400">O cuidado que seu veículo merece, com a qualidade que você confia.</p>
-                <div class="mt-4 inline-block border border-gray-600 text-gray-400 text-xs font-semibold py-1 px-3 rounded-full">
-                    Desde 2024, sinônimo de confiança e cuidado em Jandira
-                </div>
-                <div class="mt-6 flex justify-center gap-4">
-                    <a href="https://www.instagram.com/lavarapidobmcar" target="_blank" class="bg-gray-700 p-3 rounded-full hover:bg-gray-600 transition-colors flex items-center justify-center">
-                        <i data-lucide="instagram" class="w-6 h-6 text-white" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://wa.me/5511933167736" target="_blank" class="bg-gray-700 p-3 rounded-full hover:bg-gray-600 hover:scale-110 transition-all duration-300 flex items-center justify-center">
-                        <i class="fab fa-whatsapp text-2xl text-white" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://share.google/NLEPHDyiCtHmbJdsy" target="_blank" class="bg-gray-700 p-3 rounded-full hover:bg-gray-600 transition-colors flex items-center justify-center">
-                        <i data-lucide="map-pin" class="w-6 h-6 text-white" aria-hidden="true"></i>
-                    </a>
-                </div>
-                 <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-gray-500">
-                            <p>© 2025 BMCAR Lava Rápido em Jandira. Todos os direitos reservados.</p>
-                            <p class="mt-1">CNPJ: 53.929.021/0001-52</p>
+        <!-- RODAPÉ REFINADO COM NAVEGAÇÃO, NAP E FUNDO PRETO -->
+        <footer class="bg-black text-white mt-12 rounded-2xl">
+            <div class="max-w-screen-2xl mx-auto p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div class="lg:col-span-2 space-y-4">
+                        <a href="#home">
+                            <img src="imagens/bmcar-logo.png" alt="Logótipo da BMCAR Lava Rápido" class="h-20 w-auto">
+                        </a>
+                        <p class="text-sm text-gray-400 max-w-xs">O cuidado que seu veículo merece, com a qualidade que você confia.</p>
+                    </div>
 
-    <div class="mt-4 text-gray-400">
-             <p>R. João Del Moura, 326 - Vila Eunice, Jandira - SP, 06602-150</p>
-        <p>Telefone: <a href="tel:+5511933167736" class="hover:underline">(11) 93316-7736</a></p>
-    </div>
-</div>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">Navegação</h3>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Nossos Serviços</a></li>
+                            <li><a href="#team" class="text-gray-400 hover:text-white transition-colors">Trabalhe Conosco</a></li>
+                            <li><a href="#partners" class="text-gray-400 hover:text-white transition-colors">Para Empresas</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        
+                        <div class="mt-4 space-y-2 text-sm text-gray-400">
+                             <p class="flex items-start gap-2 mt-2 pt-2 border-t border-gray-700"><i data-lucide="clock" class="w-4 h-4 mt-1 flex-shrink-0"></i> <span>Ter-Sáb: 08h-18h<br>Dom: 08h-14h</span></p>
+                            <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> <a href="tel:+5511933167736" class="hover:text-white transition-colors">(11) 93316-7736</a></p>
+                            <p class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 mt-1 flex-shrink-0"></i> <span>R. João Del Moura, 326 - Vila Eunice, Jandira - SP</span></p>
+                          
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                    <p class="order-2 md:order-1 mt-4 md:mt-0">© 2025 BMCAR Lava Rápido. Todos os direitos reservados.</p>
+                    <div class="order-1 md:order-2 flex items-center gap-4">
+                        <a href="https://www.instagram.com/lavarapidobmcar" target="_blank" class="hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://wa.me/5511933167736" target="_blank" class="hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Joao+Del+Moura,326,Jandira,SP" target="_blank" class="hover:text-white transition-colors">
+    <i data-lucide="map-pin" class="w-5 h-5"></i>
+</a>
+                    </div>
+                </div>
             </div>
         </footer>
     </main>
@@ -299,189 +306,177 @@
         </div>
     </div>
     
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            const phoneNumber = "5511933167736";
+   <script>
+    // A MÁGICA COMEÇA AQUI:
+    // Isso garante que todo o código dentro dele só vai rodar
+    // depois que o HTML da página estiver 100% carregado.
+    document.addEventListener('DOMContentLoaded', () => {
 
-            function trapFocus(modalElement) {
-                const focusableElements = modalElement.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-                if (focusableElements.length === 0) return;
-                const firstFocusableElement = focusableElements[0];
-                const lastFocusableElement = focusableElements[focusableElements.length - 1];
+        // 1. Criar os ícones (incluindo o do Instagram)
+        lucide.createIcons();
+        
+        // 2. Definir as variáveis e constantes importantes
+        const phoneNumber = "5511933167736";
+        let lastFocusedElement = null; 
 
-                modalElement.addEventListener('keydown', (e) => {
-                    if (e.key === 'Tab') {
-                        if (e.shiftKey) { 
-                            if (document.activeElement === firstFocusableElement) {
-                                lastFocusableElement.focus();
-                                e.preventDefault();
-                            }
-                        } else { 
-                            if (document.activeElement === lastFocusableElement) {
-                                firstFocusableElement.focus();
-                                e.preventDefault();
-                            }
+        // 3. Declarar todas as suas funções (trapFocus, openModal, closeModal, etc.)
+        function trapFocus(modalElement) {
+            const focusableElements = modalElement.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            if (focusableElements.length === 0) return;
+            const firstFocusableElement = focusableElements[0];
+            const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+            modalElement.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) { 
+                        if (document.activeElement === firstFocusableElement) {
+                            lastFocusableElement.focus();
+                            e.preventDefault();
                         }
-                    } else if (e.key === 'Escape') {
-                         const modals = document.querySelectorAll('.fixed.inset-0:not(.hidden)');
-                         if (modals.length > 0) {
-                            modals[modals.length - 1].querySelector('button[aria-label^="Fechar"]').click();
-                         }
+                    } else { 
+                        if (document.activeElement === lastFocusableElement) {
+                            firstFocusableElement.focus();
+                            e.preventDefault();
+                        }
                     }
-                });
-                firstFocusableElement.focus();
-            }
-
-            let lastFocusedElement = null; 
-            
-            function openModal(modal) {
-                lastFocusedElement = document.activeElement;
-                modal.classList.remove('hidden');
-                trapFocus(modal);
-            }
-            
-            function closeModal(modal) {
-                modal.classList.add('hidden');
-                if (lastFocusedElement) {
-                    lastFocusedElement.focus();
-                    lastFocusedElement = null;
-                }
-            }
-
-            const serviceCards = document.querySelectorAll('.service-card');
-            const detailsModal = document.getElementById('service-details-modal');
-            const closeDetailsModalBtn = document.getElementById('close-details-modal-btn');
-            const modalTitle = document.getElementById('details-modal-title');
-            const modalPrice = document.getElementById('details-modal-price');
-            const modalList = document.getElementById('details-modal-list');
-            const serviceWhatsappLink = document.getElementById('service-whatsapp-link');
-            const servicePhoneLink = document.getElementById('service-phone-link');
-
-            serviceCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const title = card.dataset.title;
-                    const price = card.dataset.price;
-                    const details = JSON.parse(card.dataset.details);
-
-                    modalTitle.textContent = title;
-                    
-                    if (price.toLowerCase().includes("consulte")) {
-                        modalPrice.innerHTML = `<span class="text-lg font-bold text-gray-700">${price}</span>`;
-                    } else {
-                        const numericPart = price.replace(/a partir de/i, '').trim();
-                        modalPrice.innerHTML = `<span class="text-sm font-medium text-gray-500">a partir de</span> <span class="text-lg font-bold text-gray-700">${numericPart}</span>`;
-                    }
-
-                    modalList.innerHTML = ''; 
-
-                    details.forEach(item => {
-                        const li = document.createElement('li');
-                        li.className = 'flex items-center gap-2';
-                        li.innerHTML = `<i data-lucide="check" class="w-4 h-4 text-green-500" aria-hidden="true"></i><span>${item}</span>`;
-                        modalList.appendChild(li);
-                    });
-                    
-                    const whatsappMsg = `Olá! Gostaria de saber mais sobre o serviço de *${title}*.`;
-                    serviceWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
-                    servicePhoneLink.href = `tel:${phoneNumber}`;
-
-                    lucide.createIcons();
-                    openModal(detailsModal);
-                });
-            });
-
-            closeDetailsModalBtn.addEventListener('click', () => closeModal(detailsModal));
-            detailsModal.addEventListener('click', (e) => {
-                if (e.target === detailsModal) closeModal(detailsModal);
-            });
-
-            const partnerCards = document.querySelectorAll('.partner-card');
-            const partnerModal = document.getElementById('partner-contact-modal');
-            const closePartnerModalBtn = document.getElementById('close-partner-modal-btn');
-            const partnerWhatsappLink = document.getElementById('partner-whatsapp-link');
-            const partnerPhoneLink = document.getElementById('partner-phone-link');
-
-            partnerCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const whatsappMsg = card.dataset.whatsappMsg;
-                    
-                    partnerWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
-                    partnerPhoneLink.href = `tel:${phoneNumber}`;
-
-                    openModal(partnerModal);
-                });
-            });
-
-            closePartnerModalBtn.addEventListener('click', () => closeModal(partnerModal));
-            partnerModal.addEventListener('click', (e) => {
-                if (e.target === partnerModal) closeModal(partnerModal);
-            });
-            
-            const openHiringModalBtn = document.getElementById('open-hiring-modal');
-            const hiringModal = document.getElementById('hiring-modal');
-            const closeHiringModalBtn = document.getElementById('close-hiring-modal-btn');
-            const hiringWhatsappLink = document.getElementById('hiring-whatsapp-link');
-            const hiringPhoneLink = document.getElementById('hiring-phone-link');
-
-
-            openHiringModalBtn.addEventListener('click', () => {
-                const whatsappMsg = "Olá! Tenho interesse na vaga de emprego e gostaria de saber mais.";
-                hiringWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
-                hiringPhoneLink.href = `tel:${phoneNumber}`;
-                openModal(hiringModal);
-            });
-
-            closeHiringModalBtn.addEventListener('click', () => closeModal(hiringModal));
-            hiringModal.addEventListener('click', (e) => {
-                if (e.target === hiringModal) closeModal(hiringModal);
-            });
-
-            function updateBusinessStatus() {
-                const statusIndicator = document.getElementById('status-indicator');
-                const statusText = document.getElementById('status-text');
-                const todayHours = document.getElementById('today-hours');
-
-                const now = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"}));
-                const dayOfWeek = now.getDay(); 
-                const hour = now.getHours();
-                const minutes = now.getMinutes();
-
-                let isOpen = false;
-                let hoursToday = "Fechado";
-                let statusColorClass = 'bg-red-500';
-                let statusTextColorClass = 'text-red-600';
-                let statusTextContent = 'Fechado agora';
-
-                if (dayOfWeek === 1) { 
-                    hoursToday = "Folga! <a href='https://wa.me/5511933167736?text=Olá!%20Gostaria%20de%20agendar%20um%20horário.' target='_blank' class='text-yellow-500 font-semibold hover:underline'>Agende para amanhã</a>";
-                } else if (dayOfWeek >= 2 && dayOfWeek <= 6) { 
-                    hoursToday = "Hoje: 8h - 18h";
-                    if (hour >= 8 && hour < 18) {
-                        isOpen = true;
-                    }
-                } else if (dayOfWeek === 0) { 
-                    hoursToday = "Hoje: 8h - 14h";
-                    if (hour >= 8 && hour < 14) {
-                        isOpen = true;
+                } else if (e.key === 'Escape') {
+                    const modals = document.querySelectorAll('.fixed.inset-0:not(.hidden)');
+                    if (modals.length > 0) {
+                        modals[modals.length - 1].querySelector('button[aria-label^="Fechar"]').click();
                     }
                 }
-                
-                if (isOpen) {
-                    statusColorClass = 'bg-green-500';
-                    statusTextColorClass = 'text-green-600';
-                    statusTextContent = 'Aberto agora';
-                }
-
-                statusIndicator.className = `w-3 h-3 rounded-full ${statusColorClass}`;
-                statusText.textContent = statusTextContent;
-                statusText.className = `font-semibold ${statusTextColorClass}`;
-                todayHours.innerHTML = hoursToday;
+            });
+            firstFocusableElement.focus();
+        }
+        
+        function openModal(modal) {
+            lastFocusedElement = document.activeElement;
+            modal.classList.remove('hidden');
+            trapFocus(modal);
+        }
+        
+        function closeModal(modal) {
+            modal.classList.add('hidden');
+            if (lastFocusedElement) {
+                lastFocusedElement.focus();
+                lastFocusedElement = null;
             }
+        }
+        
+        function updateBusinessStatus() {
+            const statusIndicator = document.getElementById('hero-status-indicator');
+            const statusText = document.getElementById('hero-status-text');
+            if (!statusIndicator || !statusText) return;
+            const now = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"}));
+            const dayOfWeek = now.getDay(); 
+            const hour = now.getHours();
+            let isOpen = false;
+            let statusColorClass = 'bg-red-500';
+            let statusTextContent = 'Fechado agora';
 
-            updateBusinessStatus();
-            setInterval(updateBusinessStatus, 60000);
+            if (dayOfWeek === 1) { 
+                statusTextContent = "Fechado agora. Agende para amanhã!";
+            } else if (dayOfWeek >= 2 && dayOfWeek <= 6) { 
+                if (hour >= 8 && hour < 18) {
+                    isOpen = true;
+                }
+                statusTextContent = isOpen ? 'Aberto agora' : 'Fechado agora';
+            } else if (dayOfWeek === 0) { 
+                if (hour >= 8 && hour < 14) {
+                    isOpen = true;
+                }
+                statusTextContent = isOpen ? 'Aberto agora' : 'Fechado agora';
+            }
+            
+            if (isOpen) {
+                statusColorClass = 'bg-green-500';
+            }
+            statusIndicator.className = `w-3 h-3 rounded-full flex-shrink-0 ${statusColorClass}`;
+            statusText.textContent = statusTextContent;
+        }
+        
+        // 4. Rodar o código que depende dos elementos da página (event listeners, etc.)
+        const serviceCards = document.querySelectorAll('.service-card');
+        const detailsModal = document.getElementById('service-details-modal');
+        const closeDetailsModalBtn = document.getElementById('close-details-modal-btn');
+        const modalTitle = document.getElementById('details-modal-title');
+        const modalPrice = document.getElementById('details-modal-price');
+        const modalList = document.getElementById('details-modal-list');
+        const serviceWhatsappLink = document.getElementById('service-whatsapp-link');
+        const servicePhoneLink = document.getElementById('service-phone-link');
+
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.dataset.title;
+                const price = card.dataset.price;
+                const details = JSON.parse(card.dataset.details);
+                modalTitle.textContent = title;
+                if (price.toLowerCase().includes("consulte")) {
+                    modalPrice.innerHTML = `<span class="text-lg font-bold text-gray-700">${price}</span>`;
+                } else {
+                    const numericPart = price.replace(/a partir de/i, '').trim();
+                    modalPrice.innerHTML = `<span class="text-sm font-medium text-gray-500">a partir de</span> <span class="text-lg font-bold text-gray-700">${numericPart}</span>`;
+                }
+                modalList.innerHTML = ''; 
+                details.forEach(item => {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-center gap-2';
+                    li.innerHTML = `<i data-lucide="check" class="w-4 h-4 text-green-500" aria-hidden="true"></i><span>${item}</span>`;
+                    modalList.appendChild(li);
+                });
+                const whatsappMsg = `Olá! Gostaria de saber mais sobre o serviço de *${title}*.`;
+                serviceWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
+                servicePhoneLink.href = `tel:${phoneNumber}`;
+                lucide.createIcons(); // Recriar ícones dentro do modal
+                openModal(detailsModal);
+            });
         });
-    </script>
+
+        closeDetailsModalBtn.addEventListener('click', () => closeModal(detailsModal));
+        detailsModal.addEventListener('click', (e) => {
+            if (e.target === detailsModal) closeModal(detailsModal);
+        });
+
+        // ... resto dos seus event listeners para partnerCards, hiringModal, etc.
+        const partnerCards = document.querySelectorAll('.partner-card');
+        const partnerModal = document.getElementById('partner-contact-modal');
+        const closePartnerModalBtn = document.getElementById('close-partner-modal-btn');
+        const partnerWhatsappLink = document.getElementById('partner-whatsapp-link');
+        const partnerPhoneLink = document.getElementById('partner-phone-link');
+        partnerCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const whatsappMsg = card.dataset.whatsappMsg;
+                partnerWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
+                partnerPhoneLink.href = `tel:${phoneNumber}`;
+                openModal(partnerModal);
+            });
+        });
+        closePartnerModalBtn.addEventListener('click', () => closeModal(partnerModal));
+        partnerModal.addEventListener('click', (e) => {
+            if (e.target === partnerModal) closeModal(partnerModal);
+        });
+
+        const openHiringModalBtn = document.getElementById('open-hiring-modal');
+        const hiringModal = document.getElementById('hiring-modal');
+        const closeHiringModalBtn = document.getElementById('close-hiring-modal-btn');
+        const hiringWhatsappLink = document.getElementById('hiring-whatsapp-link');
+        const hiringPhoneLink = document.getElementById('hiring-phone-link');
+        openHiringModalBtn.addEventListener('click', () => {
+            const whatsappMsg = "Olá! Tenho interesse na vaga de emprego e gostaria de saber mais.";
+            hiringWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
+            hiringPhoneLink.href = `tel:${phoneNumber}`;
+            openModal(hiringModal);
+        });
+        closeHiringModalBtn.addEventListener('click', () => closeModal(hiringModal));
+        hiringModal.addEventListener('click', (e) => {
+            if (e.target === hiringModal) closeModal(hiringModal);
+        });
+        
+        // 5. Rodar a função de status e agendar sua atualização
+        updateBusinessStatus();
+        setInterval(updateBusinessStatus, 60000);
+
+    }); // FIM DO DOMCONTENTLOADED
+</script>
 </body>
 </html>
