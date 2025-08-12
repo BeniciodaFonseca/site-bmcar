@@ -6,20 +6,9 @@ body {
 }
 
 .service-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .service-card:active {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-@keyframes lift-and-glow {
-    0% { transform: translateY(0); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-    50% { transform: translateY(-2px); box-shadow: 0 8px 15px -3px rgba(255, 204, 0, 0.2), 0 4px 6px -2px rgba(255, 204, 0, 0.1); }
-    100% { transform: translateY(0); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-}
-
-.animate-lift-mobile {
-    animation: lift-and-glow 2s ease-in-out infinite;
+    background-color: #fffbeb;
 }
