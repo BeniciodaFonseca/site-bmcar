@@ -5,20 +5,21 @@ body {
     background-color: #f0f2f5;
 }
 
+.service-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
 .service-card:active {
-    background-color: #fffbeb; /* Amarelo bem claro, similar ao hover */
-    transition: background-color 0.2s ease-in-out;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-@keyframes subtle-glow {
-    0%, 100% {
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-    50% {
-        box-shadow: 0 4px 10px -2px rgba(255, 204, 0, 0.3), 0 2px 6px -1px rgba(255, 204, 0, 0.1);
-    }
+@keyframes lift-and-glow {
+    0% { transform: translateY(0); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+    50% { transform: translateY(-2px); box-shadow: 0 8px 15px -3px rgba(255, 204, 0, 0.2), 0 4px 6px -2px rgba(255, 204, 0, 0.1); }
+    100% { transform: translateY(0); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
 }
 
-.animate-glow-mobile {
-    animation: subtle-glow 2s ease-in-out infinite;
+.animate-lift-mobile {
+    animation: lift-and-glow 2s ease-in-out infinite;
 }

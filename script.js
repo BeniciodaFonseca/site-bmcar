@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     // 1. Criar os ícones (apenas uma vez)
     lucide.createIcons();
     
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth <= 768) { // Verifica a largura da tela para mobile
             const serviceCards = document.querySelectorAll('.service-card');
             serviceCards.forEach(card => {
-                card.classList.add('animate-glow-mobile');
+                card.classList.add('animate-lift-mobile');
             });
         }
     }
