@@ -64,17 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
         let statusColorClass = 'bg-red-500';
         let statusTextContent = '';
     
+        const isMobile = window.innerWidth <= 640;
+    
         if (dayOfWeek === 1) { // Segunda-feira (fechado)
-            statusTextContent = "Fechado às Segundas. Abrimos Terça-feira às 08h.";
+            statusTextContent = isMobile ? "Fechado. Abrimos Terça às 08h." : "Fechado às Segundas. Abrimos Terça-feira às 08h.";
         } else if (dayOfWeek >= 2 && dayOfWeek <= 6) { // Terça a Sábado
             if (hour >= 8 && hour < 18) {
                 isOpen = true;
                 statusTextContent = 'Aberto agora até as 18h';
             } else {
                 if (hour < 8) {
-                    statusTextContent = "Fechado agora. Abrimos hoje às 08h.";
+                    statusTextContent = "Fechado. Abrimos hoje às 08h.";
                 } else { // hour >= 18
-                    statusTextContent = "Fechado agora. Abrimos amanhã às 08h.";
+                    statusTextContent = "Fechado. Abrimos amanhã às 08h.";
                 }
             }
         } else if (dayOfWeek === 0) { // Domingo
@@ -82,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 isOpen = true;
                 statusTextContent = 'Aberto agora até as 14h';
             } else {
-                statusTextContent = "Fechado agora. Abrimos novamente Terça-feira às 08h.";
+                statusTextContent = isMobile ? "Fechado. Abrimos Terça às 08h." : "Fechado agora. Abrimos novamente Terça-feira às 08h.";
             }
         }
         
