@@ -3,6 +3,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #f0f2f5;
+    margin: 0;
 }
 
 .service-card {
