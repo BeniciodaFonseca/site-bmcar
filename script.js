@@ -1,11 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     // 1. Criar os ícones (apenas uma vez)
     lucide.createIcons();
     
     // 2. Definir as variáveis e constantes importantes
     const phoneNumber = "5511933167736";
     let lastFocusedElement = null; 
+
+    // Função para detectar se é um dispositivo mobile e adicionar a animação
+    function addMobileAnimations() {
+        if (window.innerWidth <= 768) { // Verifica a largura da tela para mobile
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.classList.add('animate-glow-mobile');
+            });
+        }
+    }
+    addMobileAnimations();
 
     // 3. Declarar todas as suas funções (trapFocus, openModal, closeModal, etc.)
     function trapFocus(modalElement) {
@@ -172,5 +182,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Rodar a função de status e agendar sua atualização
     updateBusinessStatus();
     setInterval(updateBusinessStatus, 60000);
-
 });
