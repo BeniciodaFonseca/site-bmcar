@@ -4,3 +4,21 @@ body {
     -moz-osx-font-smoothing: grayscale; 
     background-color: #f0f2f5; 
 }
+@keyframes pulse-mobile {
+    0% {
+        transform: scale(1);
+        background-color: rgba(255, 242, 173, 0.5); /* Amarelo bem claro e transparente */
+    }
+    50% {
+        transform: scale(1.02);
+        background-color: rgba(255, 242, 173, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgba(255, 242, 173, 0.5);
+    }
+}
+
+.service-card.touched-mobile {
+    animation: pulse-mobile 0.3s ease-in-out;
+}

@@ -1,6 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Criar os ícones (incluindo o do Instagram)
+    document.addEventListener('DOMContentLoaded', () => {
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    serviceCards.forEach(card => {
+        card.addEventListener('touchstart', () => {
+            card.classList.add('touched-mobile');
+            setTimeout(() => {
+                card.classList.remove('touched-mobile');
+            }, 300); // Tempo da animação (um pouco menor para remover antes de um novo toque)
+        });
+    });
+});
+
+lucide.createIcons();
     lucide.createIcons();
     
     // 2. Definir as variáveis e constantes importantes
