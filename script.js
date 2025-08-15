@@ -1,31 +1,16 @@
-// A função de animação agora será chamada pelo evento 'load'
-function triggerHeroAnimation() {
-    const heroContent = document.getElementById('hero-content');
-    if (heroContent) {
-        // Um pequeno atraso para garantir que a renderização inicial terminou
-        setTimeout(() => {
-            heroContent.classList.remove('opacity-0', '-translate-x-8');
-        }, 100);
-    }
-}
-
-// O evento 'load' espera por TUDO (imagens, scripts, etc.)
-window.addEventListener('load', triggerHeroAnimation);
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // O resto do seu script continua aqui, como estava antes
     lucide.createIcons();
     
     const phoneNumber = "5511933167736";
     let lastFocusedElement = null; 
 
+    // Funções dos Modais
     function trapFocus(modalElement) {
         const focusableElements = modalElement.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length === 0) return;
         const firstFocusableElement = focusableElements[0];
         const lastFocusableElement = focusableElements[focusableElements.length - 1];
-
         modalElement.addEventListener('keydown', (e) => {
             if (e.key === 'Tab') {
                 if (e.shiftKey) { 
@@ -63,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // Função do Status de Aberto/Fechado
     function updateBusinessStatus() {
         const statusInfo = document.getElementById('hero-status-info');
         const statusIndicator = document.getElementById('hero-status-indicator');
@@ -109,10 +95,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // Listeners dos Modais
     const serviceCards = document.querySelectorAll('.service-card');
     const detailsModal = document.getElementById('service-details-modal');
-    // ... e o resto do seu código para os modais ...
-    
+    // ... (o seu código completo para os listeners dos modais deve estar aqui)
+
     updateBusinessStatus();
     setInterval(updateBusinessStatus, 60000);
+
+    // Lógica para o Menu Mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOpenIcon = document.getElementById('menu-open-icon');
+    const menuCloseIcon = document.getElementById('menu-close-icon');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+    if(mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuOpenIcon.classList.remove('hidden');
+                menuCloseIcon.classList.add('hidden');
+            });
+        });
+    }
+
+    // Lógica para o scroll do Header
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (header) {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-opacity-80', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-opacity-80', 'shadow-lg');
+            }
+        }
+    });
 });
