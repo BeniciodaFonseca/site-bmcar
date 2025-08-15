@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // FUNÇÃO ATUALIZADA
     function updateBusinessStatus() {
         const statusIndicator = document.getElementById('hero-status-indicator');
         const statusText = document.getElementById('hero-status-text');
@@ -174,4 +173,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Rodar a função de status e agendar sua atualização
     updateBusinessStatus();
     setInterval(updateBusinessStatus, 60000);
+
+    // 6. Efeito de scroll para o header
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            // Adiciona mais opacidade e talvez uma sombra suave ao rolar
+            header.classList.add('bg-opacity-80', 'shadow-lg');
+        } else {
+            // Remove os efeitos quando está no topo
+            header.classList.remove('bg-opacity-80', 'shadow-lg');
+        }
+    });
 });
