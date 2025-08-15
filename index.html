@@ -5,35 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMCAR Lava Rápido em Jandira, Higienização e sistema leva e traz</title>
     <meta name="description" content="Lava Rápido em Jandira com lavagem detalhada, higienização. Aberto aos Domingos! Comodidade e o cuidado que seu carro merece. Agende!">
-    
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest" defer></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8L6YXS5N7"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Y8L6YXS5N7');
-    </script>
 </head>
 <body class="overflow-x-hidden">
 
     <header id="header" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-black bg-opacity-20 backdrop-blur-sm">
         <div class="max-w-screen-2xl mx-auto flex items-center justify-between p-4">
-            <a href="#home">
+            <a href="#home" class="anchor-link">
                 <img src="imagens/bmcar-logo.png" alt="Logótipo da BMCAR Lava Rápido" class="h-16 w-auto">
             </a>
             <nav class="hidden md:flex items-center gap-6 text-white font-semibold">
-                <a href="#home" class="hover:text-yellow-400 transition-colors">Início</a>
-                <a href="#services" class="hover:text-yellow-400 transition-colors">Serviços</a>
-                <a href="#partners" class="hover:text-yellow-400 transition-colors">Para Empresas</a>
+                <a href="#home" class="anchor-link hover:text-yellow-400 transition-colors">Início</a>
+                <a href="#services" class="anchor-link hover:text-yellow-400 transition-colors">Serviços</a>
+                <a href="#partners" class="anchor-link hover:text-yellow-400 transition-colors">Para Empresas</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white z-50 ml-auto">
                 <i data-lucide="menu" id="menu-open-icon" class="w-7 h-7"></i>
@@ -42,9 +33,9 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-black bg-opacity-90 backdrop-blur-lg flex flex-col items-center justify-center">
             <nav class="flex flex-col items-center gap-8 text-white text-2xl font-semibold">
-                <a href="#home" class="mobile-menu-link hover:text-yellow-400 transition-colors">Início</a>
-                <a href="#services" class="mobile-menu-link hover:text-yellow-400 transition-colors">Serviços</a>
-                <a href="#partners" class="mobile-menu-link hover:text-yellow-400 transition-colors">Para Empresas</a>
+                <a href="#home" class="mobile-menu-link anchor-link hover:text-yellow-400 transition-colors">Início</a>
+                <a href="#services" class="mobile-menu-link anchor-link hover:text-yellow-400 transition-colors">Serviços</a>
+                <a href="#partners" class="mobile-menu-link anchor-link hover:text-yellow-400 transition-colors">Para Empresas</a>
             </nav>
         </div>
     </header>
@@ -55,23 +46,14 @@
                 <img src="imagens/bmcar-fundo-hero.png" alt="Carro desportivo a ser lavado no lava-rápido BMCAR em Jandira" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black opacity-50"></div>
             </div>
-            
             <div class="relative z-10 flex min-h-screen items-center justify-center p-6">
                 <div class="flex flex-col items-center text-center max-w-4xl">
                     <img src="imagens/bmcar-logo.png" alt="Logótipo da BMCAR Lava Rápido" class="h-48 w-auto mb-2">
-                    <h1 class="font-black tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl -mt-8">
-                        Lava Rápido em  <span class="text-yellow-400 block">Jandira</span>
-                    </h1>
-                    <p class="text-gray-200 mt-6 text-base lg:text-xl">
-                        A solução completa para seu carro em Jandira: higienização, lavagem técnica e o sistema leva e traz.
-                    </p>
+                    <h1 class="font-black tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl -mt-8">Lava Rápido em <span class="text-yellow-400 block">Jandira</span></h1>
+                    <p class="text-gray-200 mt-6 text-base lg:text-xl">A solução completa para seu carro em Jandira: higienização, lavagem técnica e o sistema leva e traz.</p>
                     <div class="mt-8 flex flex-row items-center justify-center gap-4 w-full">
-                        <a href="https://wa.me/5511933167736?text=Olá! Gostaria de fazer um agendamento rápido." target="_blank" class="bg-yellow-400 text-black font-bold py-3 px-8 lg:py-4 lg:px-10 rounded-lg hover:bg-yellow-500 transition-all text-center text-base lg:text-lg flex-1">
-                            Agendar Agora
-                        </a>
-                        <a href="#services" class="border-2 border-white text-white font-bold py-3 px-8 lg:py-4 lg:px-10 rounded-lg hover:bg-white hover:text-black transition-all text-center text-base lg:text-lg flex-1">
-                             Nossos Serviços
-                        </a>
+                        <a href="https://wa.me/5511933167736?text=Olá! Gostaria de fazer um agendamento rápido." target="_blank" class="bg-yellow-400 text-black font-bold py-3 px-8 lg:py-4 lg:px-10 rounded-lg hover:bg-yellow-500 transition-all text-center text-base lg:text-lg flex-1">Agendar Agora</a>
+                        <a href="#services" class="anchor-link border-2 border-white text-white font-bold py-3 px-8 lg:py-4 lg:px-10 rounded-lg hover:bg-white hover:text-black transition-all text-center text-base lg:text-lg flex-1">Nossos Serviços</a>
                     </div>
                     <div class="mt-10 flex flex-col items-center gap-4 text-white">
                         <div id="hero-status-info" class="flex items-center gap-2 text-sm lg:text-base font-semibold transition-all duration-300">
@@ -90,90 +72,69 @@
                     </div>
                 </div>
             </div>
-            
-            <a href="#services" aria-label="Rolar para a secção de serviços" class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:flex items-center justify-center w-12 h-12 rounded-full border-2 border-white animate-bounce text-white hover:bg-white hover:text-black transition-colors">
+            <a href="#services" aria-label="Rolar para a secção de serviços" class="anchor-link absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:flex items-center justify-center w-12 h-12 rounded-full border-2 border-white animate-bounce text-white hover:bg-white hover:text-black transition-colors">
                 <i data-lucide="arrow-down" class="w-8 h-8"></i>
             </a>
         </section>
 
-        <section id="services" class="mt-8 p-4 mx-auto w-full max-w-screen-2xl">
+        <section id="services" class="pt-20 -mt-16 p-4 mx-auto w-full max-w-screen-2xl">
             <div class="text-left mb-6">
                 <h2 class="text-3xl font-bold">Nossos Serviços</h2>
                 <p class="text-sm text-gray-400 mt-1">Clique para saber mais</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-title="Ducha" data-price="a partir de R$ 20,00" data-details='["Lavagem externa completa", "Secagem com flanela", "Aplicação de pneu pretinho"]'>
+                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-101 hover:bg-yellow-50 transition-all duration-300" data-title="Ducha" data-price="a partir de R$ 20,00" data-details='["Lavagem externa completa", "Secagem com flanela", "Aplicação de pneu pretinho"]'>
                     <i data-lucide="shower-head" class="w-10 h-10 text-yellow-500 flex-shrink-0" aria-hidden="true"></i>
-                    <div>
-                        <h3 class="font-bold">Ducha</h3>
-                        <p class="text-sm text-gray-600">Lavagem externa com acabamento.</p>
-                    </div>
+                    <div><h3 class="font-bold">Ducha</h3><p class="text-sm text-gray-600">Lavagem externa com acabamento.</p></div>
                 </button>
-                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-title="Lavagem Simples" data-price="a partir de R$ 40,00" data-details='["Todos os itens da Ducha", "Aspiração interna completa", "Limpeza de tapetes", "Limpeza do painel e vidros", "Aromatização"]'>
+                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-101 hover:bg-yellow-50 transition-all duration-300" data-title="Lavagem Simples" data-price="a partir de R$ 40,00" data-details='["Todos os itens da Ducha", "Aspiração interna completa", "Limpeza de tapetes", "Limpeza do painel e vidros", "Aromatização"]'>
                     <i data-lucide="droplets" class="w-10 h-10 text-yellow-500 flex-shrink-0" aria-hidden="true"></i>
-                    <div>
-                        <h3 class="font-bold">Lavagem Simples</h3>
-                        <p class="text-sm text-gray-600">Cuidado por dentro e por fora.</p>
-                    </div>
+                    <div><h3 class="font-bold">Lavagem Simples</h3><p class="text-sm text-gray-600">Cuidado por dentro e por fora.</p></div>
                 </button>
-                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-title="Lavagem Completa" data-price="a partir de R$ 130,00" data-details='["Todos os itens da Lavagem Simples", "Limpeza detalhada do motor", "Limpeza do chassi"]'>
+                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-101 hover:bg-yellow-50 transition-all duration-300" data-title="Lavagem Completa" data-price="a partir de R$ 130,00" data-details='["Todos os itens da Lavagem Simples", "Limpeza detalhada do motor", "Limpeza do chassi"]'>
                     <i data-lucide="sparkles" class="w-10 h-10 text-yellow-500 flex-shrink-0" aria-hidden="true"></i>
-                    <div>
-                        <h3 class="font-bold">Lavagem Completa</h3>
-                        <p class="text-sm text-gray-600">Limpeza detalhada de motor e chassi.</p>
-                    </div>
+                    <div><h3 class="font-bold">Lavagem Completa</h3><p class="text-sm text-gray-600">Limpeza detalhada de motor e chassi.</p></div>
                 </button>
-                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-title="Higienização Completa" data-price="a partir de R$ 350,00" data-details='["Todos os itens da Lavagem Simples", "Limpeza profunda de teto, bancos e carpete", "Condicionamento para couro (se aplicável)"]'>
+                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-101 hover:bg-yellow-50 transition-all duration-300" data-title="Higienização Completa" data-price="a partir de R$ 350,00" data-details='["Todos os itens da Lavagem Simples", "Limpeza profunda de teto, bancos e carpete", "Condicionamento para couro (se aplicável)"]'>
                     <i data-lucide="wind" class="w-10 h-10 text-yellow-500 flex-shrink-0" aria-hidden="true"></i>
-                    <div>
-                        <h3 class="font-bold">Higienização Completa</h3>
-                        <p class="text-sm text-gray-600">Limpeza profunda para renovar o interior.</p>
-                    </div>
+                    <div><h3 class="font-bold">Higienização Completa</h3><p class="text-sm text-gray-600">Limpeza profunda para renovar o interior.</p></div>
                 </button>
-                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-title="Leva e Traz" data-price="Consulte" data-details='["Buscamos seu veículo no local de sua preferência.", "Entregamos seu carro limpo e seguro.", "Comodidade e praticidade."]'>
+                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-101 hover:bg-yellow-50 transition-all duration-300" data-title="Leva e Traz" data-price="Consulte" data-details='["Buscamos seu veículo no local de sua preferência.", "Entregamos seu carro limpo e seguro.", "Comodidade e praticidade."]'>
                     <i data-lucide="arrow-left-right" class="w-10 h-10 text-yellow-500 flex-shrink-0" aria-hidden="true"></i>
-                    <div>
-                        <h3 class="font-bold">Leva e Traz</h3>
-                        <p class="text-sm text-gray-600">Buscamos e entregamos seu veículo.</p>
-                    </div>
+                    <div><h3 class="font-bold">Leva e Traz</h3><p class="text-sm text-gray-600">Buscamos e entregamos seu veículo.</p></div>
                 </button>
-                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-title="Estacionamento Pernoite" data-price="Consulte" data-details='["Ideal para quem não tem garagem.", "<strong class=\"text-red-600\">No momento, todas as vagas estão preenchidas.</strong>", "Estamos trabalhando para aumentar o número de vagas.", "Ligue para consultar a fila de espera."]'>
+                <button class="service-card bg-white rounded-2xl p-6 shadow-md flex items-center gap-4 text-left hover:shadow-xl hover:scale-101 hover:bg-yellow-50 transition-all duration-300" data-title="Estacionamento Pernoite" data-price="Consulte" data-details='["Ideal para quem não tem garagem.", "<strong class=\"text-red-600\">No momento, todas as vagas estão preenchidas.</strong>", "Estamos trabalhando para aumentar o número de vagas.", "Ligue para consultar a fila de espera."]'>
                     <i data-lucide="parking-square" class="w-10 h-10 text-yellow-500 flex-shrink-0" aria-hidden="true"></i>
-                    <div>
-                        <h3 class="font-bold">Estacionamento Pernoite</h3>
-                        <p class="text-sm text-gray-600">Guarde seu carro com segurança.</p>
-                    </div>
+                    <div><h3 class="font-bold">Estacionamento Pernoite</h3><p class="text-sm text-gray-600">Guarde seu carro com segurança.</p></div>
                 </button>
             </div>
         </section>
 
-        <section id="team" class="mt-12 p-4 mx-auto w-full max-w-screen-2xl">
+        <section id="team" class="pt-20 -mt-16 p-4 mx-auto w-full max-w-screen-2xl">
             <div class="bg-white rounded-2xl shadow-md p-8 text-center">
                 <i data-lucide="user-check" class="w-12 h-12 mx-auto text-yellow-500" aria-hidden="true"></i>
                 <h2 class="text-3xl font-bold mt-4">Faça Parte da Nossa Equipe</h2>
                 <p class="text-gray-600 mt-2 max-w-prose mx-auto">Estamos em busca de profissionais apaixonados por carros para se juntar ao time BMCAR.</p>
-                <button id="open-hiring-modal" class="mt-6 inline-block bg-yellow-400 text-black font-bold py-3 px-8 rounded-lg hover:bg-yellow-500 transition-all">
-                    Entrar em Contato
-                </button>
+                <button id="open-hiring-modal" class="mt-6 inline-block bg-yellow-400 text-black font-bold py-3 px-8 rounded-lg hover:bg-yellow-500 transition-all">Entrar em Contato</button>
             </div>
         </section>
 
-        <section id="partners" class="mt-12 p-4 mx-auto w-full max-w-screen-2xl">
+        <section id="partners" class="pt-20 -mt-16 p-4 mx-auto w-full max-w-screen-2xl">
             <div class="bg-white rounded-2xl shadow-md p-8 text-center">
                 <h2 class="text-3xl font-bold">Soluções para Empresas e Parceiros</h2>
                 <p class="text-gray-500 mt-1 max-w-prose mx-auto">Condições especiais para o seu negócio.</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                     <button class="partner-card p-6 shadow-md text-center w-full bg-gray-100 hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-whatsapp-msg="Olá! Gostaria de saber mais sobre as condições para preparação de veículos para venda.">
+                     <button class="partner-card p-6 shadow-md text-center w-full bg-gray-100 hover:shadow-xl hover:scale-101 hover:bg-yellow-50 transition-all duration-300" data-whatsapp-msg="Olá! Gostaria de saber mais sobre as condições para preparação de veículos para venda.">
                         <i data-lucide="tag" class="w-10 h-10 mx-auto text-yellow-500" aria-hidden="true"></i>
                         <h3 class="font-bold text-lg mt-3">Venda de Veículos</h3>
                         <p class="text-sm text-gray-600 mt-1">Valorize seu carro para a venda com uma limpeza profissional que impressiona.</p>
                     </button>
-                    <button class="partner-card p-6 shadow-md text-center w-full bg-gray-100 hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-whatsapp-msg="Olá! Gostaria de saber mais sobre os planos para gestão de frotas.">
+                    <button class="partner-card p-6 shadow-md text-center w-full bg-gray-100 hover:shadow-xl hover:scale-101 hover:bg-yellow-50 transition-all duration-300" data-whatsapp-msg="Olá! Gostaria de saber mais sobre os planos para gestão de frotas.">
                         <i data-lucide="truck" class="w-10 h-10 mx-auto text-yellow-500" aria-hidden="true"></i>
                         <h3 class="font-bold text-lg mt-3">Gestão de Frotas</h3>
                         <p class="text-sm text-gray-600 mt-1">Mantenha a frota da sua empresa sempre limpa e apresentável com nossos planos especiais.</p>
                     </button>
-                    <button class="partner-card p-6 shadow-md text-center w-full bg-gray-100 hover:shadow-xl hover:scale-[1.01] hover:bg-yellow-50 transition-all duration-300" data-whatsapp-msg="Olá! Tenho uma oficina e gostaria de saber mais sobre as parcerias para finalização de serviços.">
+                    <button class="partner-card p-6 shadow-md text-center w-full bg-gray-100 hover:shadow-xl hover:scale-101 hover:bg-yellow-50 transition-all duration-300" data-whatsapp-msg="Olá! Tenho uma oficina e gostaria de saber mais sobre as parcerias para finalização de serviços.">
                         <i data-lucide="wrench" class="w-10 h-10 mx-auto text-yellow-500" aria-hidden="true"></i>
                         <h3 class="font-bold text-lg mt-3">Oficinas e Funilarias</h3>
                         <p class="text-sm text-gray-600 mt-1">Entregue o carro do seu cliente impecável após o reparo. Oferecemos o toque final.</p>
@@ -186,17 +147,15 @@
             <div class="max-w-screen-2xl mx-auto p-8 md:p-12">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                     <div class="lg:col-span-2 space-y-4">
-                        <a href="#home">
-                            <img src="imagens/bmcar-logo.png" alt="Logótipo da BMCAR Lava Rápido" class="h-24 w-auto md:h-28">
-                        </a>
+                        <a href="#home" class="anchor-link"><img src="imagens/bmcar-logo.png" alt="Logótipo da BMCAR Lava Rápido" class="h-24 w-auto md:h-28"></a>
                         <p class="text-sm text-gray-400 max-w-xs">O cuidado que seu veículo merece, com a qualidade que você confia.</p>
                     </div>
                     <div>
                         <h3 class="font-bold text-lg text-white">Navegação</h3>
                         <ul class="mt-4 space-y-2 text-sm">
-                            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Nossos Serviços</a></li>
-                            <li><a href="#team" class="text-gray-400 hover:text-white transition-colors">Trabalhe Conosco</a></li>
-                            <li><a href="#partners" class="text-gray-400 hover:text-white transition-colors">Para Empresas</a></li>
+                            <li><a href="#services" class="anchor-link text-gray-400 hover:text-white transition-colors">Nossos Serviços</a></li>
+                            <li><a href="#team" class="anchor-link text-gray-400 hover:text-white transition-colors">Trabalhe Conosco</a></li>
+                            <li><a href="#partners" class="anchor-link text-gray-400 hover:text-white transition-colors">Para Empresas</a></li>
                         </ul>
                     </div>
                     <div class="lg:col-span-2">
@@ -204,7 +163,7 @@
                         <div class="mt-4 space-y-2 text-sm text-gray-400">
                              <p class="flex items-start gap-2"><i data-lucide="clock" class="w-4 h-4 mt-1 flex-shrink-0"></i> <span>Ter-Sáb: 08h-18h<br>Dom: 08h-14h</span></p>
                             <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> <a href="tel:+5511933167736" class="hover:text-white transition-colors">(11) 93316-7736</a></p>
-                            <p class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 mt-1 flex-shrink-0"></i> <a href="https://share.google/n1cSwTjKRR90z8AoL" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">R. João Del Moura, 326 - Vila Eunice, Jandira - SP</a></p>
+                            <p class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 mt-1 flex-shrink-0"></i> <a href="https://share.google/n1cSwTjKRR90z8AoL" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors break-words">R. João Del Moura, 326 - Vila Eunice, Jandira - SP</a></p>
                         </div>
                     </div>
                 </div>

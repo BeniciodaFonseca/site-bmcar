@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneNumber = "5511933167736";
     let lastFocusedElement = null; 
 
-    // Funções dos Modais
+    // Funções dos Modais (NÃO ABREVIADO)
     function trapFocus(modalElement) {
         const focusableElements = modalElement.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length === 0) return;
@@ -95,11 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // Listeners dos Modais
-    const serviceCards = document.querySelectorAll('.service-card');
-    const detailsModal = document.getElementById('service-details-modal');
-    // ... (o seu código completo para os listeners dos modais deve estar aqui)
-
     updateBusinessStatus();
     setInterval(updateBusinessStatus, 60000);
 
@@ -108,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
     const menuOpenIcon = document.getElementById('menu-open-icon');
     const menuCloseIcon = document.getElementById('menu-close-icon');
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
     if(mobileMenuButton) {
         mobileMenuButton.addEventListener('click', () => {
@@ -117,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuCloseIcon.classList.toggle('hidden');
         });
 
-        mobileMenuLinks.forEach(link => {
+        document.querySelectorAll('.mobile-menu-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
                 menuOpenIcon.classList.remove('hidden');
@@ -136,5 +130,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('bg-opacity-80', 'shadow-lg');
             }
         }
+    });
+
+    // ==========================================================
+    // CÓDIGO QUE FAZ A SETA FUNCIONAR (ROLAGEM SUAVE)
+    // ==========================================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
