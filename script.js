@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneNumber = "5511933167736";
     let lastFocusedElement = null; 
 
-    // Funções dos Modais (NÃO ABREVIADO)
+    // Funções dos Modais
     function trapFocus(modalElement) {
         const focusableElements = modalElement.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length === 0) return;
@@ -98,6 +98,88 @@ document.addEventListener('DOMContentLoaded', () => {
     updateBusinessStatus();
     setInterval(updateBusinessStatus, 60000);
 
+    // Lógica para os Modais
+    const serviceCards = document.querySelectorAll('.service-card');
+    const detailsModal = document.getElementById('service-details-modal');
+    if(detailsModal) {
+        const closeDetailsModalBtn = document.getElementById('close-details-modal-btn');
+        const modalTitle = document.getElementById('details-modal-title');
+        const modalPrice = document.getElementById('details-modal-price');
+        const modalList = document.getElementById('details-modal-list');
+        const serviceWhatsappLink = document.getElementById('service-whatsapp-link');
+        const servicePhoneLink = document.getElementById('service-phone-link');
+
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.dataset.title;
+                const price = card.dataset.price;
+                const details = JSON.parse(card.dataset.details);
+                modalTitle.textContent = title;
+                if (price.toLowerCase().includes("consulte")) {
+                    modalPrice.innerHTML = `<span class="text-lg font-bold text-gray-700">${price}</span>`;
+                } else {
+                    const numericPart = price.replace(/a partir de/i, '').trim();
+                    modalPrice.innerHTML = `<span class="text-sm font-medium text-gray-500">a partir de</span> <span class="text-lg font-bold text-gray-700">${numericPart}</span>`;
+                }
+                modalList.innerHTML = ''; 
+                details.forEach(item => {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-center gap-2';
+                    li.innerHTML = `<i data-lucide="check" class="w-4 h-4 text-green-500" aria-hidden="true"></i><span>${item}</span>`;
+                    modalList.appendChild(li);
+                });
+                const whatsappMsg = `Olá! Gostaria de saber mais sobre o serviço de *${title}*.`;
+                serviceWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
+                servicePhoneLink.href = `tel:${phoneNumber}`;
+                lucide.createIcons();
+                openModal(detailsModal);
+            });
+        });
+
+        closeDetailsModalBtn.addEventListener('click', () => closeModal(detailsModal));
+        detailsModal.addEventListener('click', (e) => {
+            if (e.target === detailsModal) closeModal(detailsModal);
+        });
+    }
+
+    const partnerCards = document.querySelectorAll('.partner-card');
+    const partnerModal = document.getElementById('partner-contact-modal');
+    if(partnerModal) {
+        const closePartnerModalBtn = document.getElementById('close-partner-modal-btn');
+        const partnerWhatsappLink = document.getElementById('partner-whatsapp-link');
+        const partnerPhoneLink = document.getElementById('partner-phone-link');
+        partnerCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const whatsappMsg = card.dataset.whatsappMsg;
+                partnerWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
+                partnerPhoneLink.href = `tel:${phoneNumber}`;
+                openModal(partnerModal);
+            });
+        });
+        closePartnerModalBtn.addEventListener('click', () => closeModal(partnerModal));
+        partnerModal.addEventListener('click', (e) => {
+            if (e.target === partnerModal) closeModal(partnerModal);
+        });
+    }
+
+    const openHiringModalBtn = document.getElementById('open-hiring-modal');
+    const hiringModal = document.getElementById('hiring-modal');
+    if(hiringModal) {
+        const closeHiringModalBtn = document.getElementById('close-hiring-modal-btn');
+        const hiringWhatsappLink = document.getElementById('hiring-whatsapp-link');
+        const hiringPhoneLink = document.getElementById('hiring-phone-link');
+        openHiringModalBtn.addEventListener('click', () => {
+            const whatsappMsg = "Olá! Tenho interesse na vaga de emprego e gostaria de saber mais.";
+            hiringWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
+            hiringPhoneLink.href = `tel:${phoneNumber}`;
+            openModal(hiringModal);
+        });
+        closeHiringModalBtn.addEventListener('click', () => closeModal(hiringModal));
+        hiringModal.addEventListener('click', (e) => {
+            if (e.target === hiringModal) closeModal(hiringModal);
+        });
+    }
+
     // Lógica para o Menu Mobile
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -132,10 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ==========================================================
-    // CÓDIGO QUE FAZ A SETA FUNCIONAR (ROLAGEM SUAVE)
-    // ==========================================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Lógica definitiva para rolagem suave
+    document.querySelectorAll('a.anchor-link').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
