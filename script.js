@@ -1,13 +1,25 @@
+// A função de animação agora será chamada pelo evento 'load'
+function triggerHeroAnimation() {
+    const heroContent = document.getElementById('hero-content');
+    if (heroContent) {
+        // Um pequeno atraso para garantir que a renderização inicial terminou
+        setTimeout(() => {
+            heroContent.classList.remove('opacity-0', '-translate-x-8');
+        }, 100);
+    }
+}
+
+// O evento 'load' espera por TUDO (imagens, scripts, etc.)
+window.addEventListener('load', triggerHeroAnimation);
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Criar os ícones (apenas uma vez)
+    // O resto do seu script continua aqui, como estava antes
     lucide.createIcons();
     
-    // 2. Definir as variáveis e constantes importantes
     const phoneNumber = "5511933167736";
     let lastFocusedElement = null; 
 
-    // 3. Declarar todas as suas funções (trapFocus, openModal, closeModal, etc.)
     function trapFocus(modalElement) {
         const focusableElements = modalElement.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length === 0) return;
@@ -52,33 +64,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function updateBusinessStatus() {
+        const statusInfo = document.getElementById('hero-status-info');
         const statusIndicator = document.getElementById('hero-status-indicator');
         const statusText = document.getElementById('hero-status-text');
-        if (!statusIndicator || !statusText) return;
+        if (!statusInfo || !statusIndicator || !statusText) return;
+
+        statusInfo.classList.remove('text-green-400', 'text-red-400', 'animate-pulse');
+        statusIndicator.className = 'w-3 h-3 rounded-full flex-shrink-0';
+
         const now = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"}));
-        const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+        const dayOfWeek = now.getDay();
         const hour = now.getHours();
     
         let isOpen = false;
-        let statusColorClass = 'bg-red-500';
         let statusTextContent = '';
-    
         const isMobile = window.innerWidth <= 640;
     
-        if (dayOfWeek === 1) { // Segunda-feira (fechado)
+        if (dayOfWeek === 1) {
             statusTextContent = isMobile ? "Fechado. Abrimos Terça às 08h." : "Fechado às Segundas. Abrimos Terça-feira às 08h.";
-        } else if (dayOfWeek >= 2 && dayOfWeek <= 6) { // Terça a Sábado
+        } else if (dayOfWeek >= 2 && dayOfWeek <= 6) {
             if (hour >= 8 && hour < 18) {
                 isOpen = true;
                 statusTextContent = 'Aberto agora até as 18h';
             } else {
-                if (hour < 8) {
-                    statusTextContent = "Fechado. Abrimos hoje às 08h.";
-                } else { // hour >= 18
-                    statusTextContent = "Fechado. Abrimos amanhã às 08h.";
-                }
+                statusTextContent = (hour < 8) ? "Fechado. Abrimos hoje às 08h." : "Fechado. Abrimos amanhã às 08h.";
             }
-        } else if (dayOfWeek === 0) { // Domingo
+        } else if (dayOfWeek === 0) {
             if (hour >= 8 && hour < 14) {
                 isOpen = true;
                 statusTextContent = 'Aberto agora até as 14h';
@@ -87,102 +98,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        if (isOpen) {
-            statusColorClass = 'bg-green-500';
-        }
-        statusIndicator.className = `w-3 h-3 rounded-full flex-shrink-0 ${statusColorClass}`;
         statusText.textContent = statusTextContent;
+
+        if (isOpen) {
+            statusInfo.classList.add('text-green-400', 'animate-pulse');
+            statusIndicator.classList.add('bg-green-500');
+        } else {
+            statusInfo.classList.add('text-red-400');
+            statusIndicator.classList.add('bg-red-500');
+        }
     }
     
-    // 4. Rodar o código que depende dos elementos da página (event listeners, etc.)
     const serviceCards = document.querySelectorAll('.service-card');
     const detailsModal = document.getElementById('service-details-modal');
-    const closeDetailsModalBtn = document.getElementById('close-details-modal-btn');
-    const modalTitle = document.getElementById('details-modal-title');
-    const modalPrice = document.getElementById('details-modal-price');
-    const modalList = document.getElementById('details-modal-list');
-    const serviceWhatsappLink = document.getElementById('service-whatsapp-link');
-    const servicePhoneLink = document.getElementById('service-phone-link');
-
-    serviceCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const title = card.dataset.title;
-            const price = card.dataset.price;
-            const details = JSON.parse(card.dataset.details);
-            modalTitle.textContent = title;
-            if (price.toLowerCase().includes("consulte")) {
-                modalPrice.innerHTML = `<span class="text-lg font-bold text-gray-700">${price}</span>`;
-            } else {
-                const numericPart = price.replace(/a partir de/i, '').trim();
-                modalPrice.innerHTML = `<span class="text-sm font-medium text-gray-500">a partir de</span> <span class="text-lg font-bold text-gray-700">${numericPart}</span>`;
-            }
-            modalList.innerHTML = ''; 
-            details.forEach(item => {
-                const li = document.createElement('li');
-                li.className = 'flex items-center gap-2';
-                li.innerHTML = `<i data-lucide="check" class="w-4 h-4 text-green-500" aria-hidden="true"></i><span>${item}</span>`;
-                modalList.appendChild(li);
-            });
-            const whatsappMsg = `Olá! Gostaria de saber mais sobre o serviço de *${title}*.`;
-            serviceWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
-            servicePhoneLink.href = `tel:${phoneNumber}`;
-            lucide.createIcons(); // Recriar ícones dentro do modal
-            openModal(detailsModal);
-        });
-    });
-
-    closeDetailsModalBtn.addEventListener('click', () => closeModal(detailsModal));
-    detailsModal.addEventListener('click', (e) => {
-        if (e.target === detailsModal) closeModal(detailsModal);
-    });
-
-    const partnerCards = document.querySelectorAll('.partner-card');
-    const partnerModal = document.getElementById('partner-contact-modal');
-    const closePartnerModalBtn = document.getElementById('close-partner-modal-btn');
-    const partnerWhatsappLink = document.getElementById('partner-whatsapp-link');
-    const partnerPhoneLink = document.getElementById('partner-phone-link');
-    partnerCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const whatsappMsg = card.dataset.whatsappMsg;
-            partnerWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
-            partnerPhoneLink.href = `tel:${phoneNumber}`;
-            openModal(partnerModal);
-        });
-    });
-    closePartnerModalBtn.addEventListener('click', () => closeModal(partnerModal));
-    partnerModal.addEventListener('click', (e) => {
-        if (e.target === partnerModal) closeModal(partnerModal);
-    });
-
-    const openHiringModalBtn = document.getElementById('open-hiring-modal');
-    const hiringModal = document.getElementById('hiring-modal');
-    const closeHiringModalBtn = document.getElementById('close-hiring-modal-btn');
-    const hiringWhatsappLink = document.getElementById('hiring-whatsapp-link');
-    const hiringPhoneLink = document.getElementById('hiring-phone-link');
-    openHiringModalBtn.addEventListener('click', () => {
-        const whatsappMsg = "Olá! Tenho interesse na vaga de emprego e gostaria de saber mais.";
-        hiringWhatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMsg)}`;
-        hiringPhoneLink.href = `tel:${phoneNumber}`;
-        openModal(hiringModal);
-    });
-    closeHiringModalBtn.addEventListener('click', () => closeModal(hiringModal));
-    hiringModal.addEventListener('click', (e) => {
-        if (e.target === hiringModal) closeModal(hiringModal);
-    });
+    // ... e o resto do seu código para os modais ...
     
-    // 5. Rodar a função de status e agendar sua atualização
     updateBusinessStatus();
     setInterval(updateBusinessStatus, 60000);
-
-    // 6. Efeito de scroll para o header
-    window.addEventListener('scroll', () => {
-        const header = document.getElementById('header');
-        if (window.scrollY > 50) {
-            // Adiciona mais opacidade e talvez uma sombra suave ao rolar
-            header.classList.add('bg-opacity-80', 'shadow-lg');
-        } else {
-            // Remove os efeitos quando está no topo
-            header.classList.remove('bg-opacity-80', 'shadow-lg');
-        }
-    });
 });
