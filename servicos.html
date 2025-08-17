@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Serviços - BMCAR Lava Rápido</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'], 'heading': ['Poppins', 'sans-serif'], },
+                    colors: { 'brand-yellow': '#FFD700', 'dark-bg': '#101010', }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-gray-200 font-sans antialiased">
+
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark-bg/90 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="assets/images/bmcar-logo.png" alt="Logo da BMCAR" class="h-12 sm:h-14 md:h-16 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="servicos.html" class="nav-link text-brand-yellow uppercase text-sm font-semibold tracking-wider">Serviços</a>
+                <a href="galeria.html" class="nav-link hover:text-brand-yellow transition-colors duration-300 uppercase text-sm font-semibold tracking-wider">Galeria</a>
+                <a href="parceiros.html" class="nav-link hover:text-brand-yellow transition-colors duration-300 uppercase text-sm font-semibold tracking-wider">Para Empresas</a>
+                <a href="trabalhe-conosco.html" class="nav-link hover:text-brand-yellow transition-colors duration-300 uppercase text-sm font-semibold tracking-wider">Trabalhe Conosco</a>
+                <a href="index.html#contact" class="nav-link hover:text-brand-yellow transition-colors duration-300 uppercase text-sm font-semibold tracking-wider">Contato</a>
+            </nav>
+            <button id="mobile-menu-button" class="lg:hidden z-50"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-dark-bg/95 backdrop-blur-sm z-40 hidden flex-col items-center justify-center space-y-8 lg:hidden">
+        <a href="index.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Início</a>
+        <a href="servicos.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Serviços</a>
+        <a href="galeria.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Galeria</a>
+        <a href="parceiros.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Para Empresas</a>
+        <a href="trabalhe-conosco.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Trabalhe Conosco</a>
+        <a href="index.html#contact" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Contato</a>
+    </div>
+
+    <main class="pt-24 md:pt-32">
+        <section id="services" class="bg-black py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-heading font-extrabold uppercase">Nossos <span class="text-brand-yellow">Serviços</span></h2>
+                    <p class="text-lg text-gray-400 mt-2">Clique em um serviço para saber mais detalhes.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <button class="service-card text-gray-800 bg-gray-100 rounded-lg p-6 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-white transition-all duration-300" data-title="Ducha" data-price="a partir de R$ 20,00" data-details='["Lavagem externa completa", "Secagem com flanela", "Aplicação de pneu pretinho"]'>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="shower-head" class="w-10 h-10 text-yellow-500 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">Ducha</h3>
+                                <p class="text-sm text-gray-600">Lavagem externa com acabamento.</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="service-card text-gray-800 bg-gray-100 rounded-lg p-6 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-white transition-all duration-300" data-title="Lavagem Simples" data-price="a partir de R$ 40,00" data-details='["Todos os itens da Ducha", "Aspiração interna completa", "Limpeza de tapetes", "Limpeza do painel e vidros", "Aromatização"]'>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="droplets" class="w-10 h-10 text-yellow-500 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">Lavagem Simples</h3>
+                                <p class="text-sm text-gray-600">Cuidado por dentro e por fora.</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="service-card text-gray-800 bg-gray-100 rounded-lg p-6 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-white transition-all duration-300" data-title="Lavagem Completa" data-price="a partir de R$ 130,00" data-details='["Todos os itens da Lavagem Simples", "Limpeza detalhada do motor", "Limpeza do chassi"]'>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="sparkles" class="w-10 h-10 text-yellow-500 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">Lavagem Completa</h3>
+                                <p class="text-sm text-gray-600">Limpeza detalhada de motor e chassi.</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="service-card text-gray-800 bg-gray-100 rounded-lg p-6 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-white transition-all duration-300" data-title="Higienização Completa" data-price="a partir de R$ 350,00" data-details='["Todos os itens da Lavagem Simples", "Limpeza profunda de teto, bancos e carpete", "Condicionamento para couro (se aplicável)"]'>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="wind" class="w-10 h-10 text-yellow-500 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">Higienização Completa</h3>
+                                <p class="text-sm text-gray-600">Renove o interior do seu veículo.</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="service-card text-gray-800 bg-gray-100 rounded-lg p-6 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-white transition-all duration-300" data-title="Leva e Traz" data-price="Consulte" data-details='["Buscamos seu veículo no local de sua preferência.", "Entregamos seu carro limpo e seguro.", "Comodidade e praticidade para você."]'>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="arrow-left-right" class="w-10 h-10 text-yellow-500 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">Leva e Traz</h3>
+                                <p class="text-sm text-gray-600">Buscamos e entregamos seu veículo.</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="service-card text-gray-800 bg-gray-100 rounded-lg p-6 text-left hover:shadow-xl hover:scale-[1.01] hover:bg-white transition-all duration-300" data-title="Estacionamento Pernoite" data-price="Consulte" data-details='["Ideal para quem não tem garagem.", "<strong class=\"text-red-600\">No momento, todas as vagas estão preenchidas.</strong>", "Estamos trabalhando para aumentar o número de vagas.", "Ligue para consultar a fila de espera."]'>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="parking-square" class="w-10 h-10 text-yellow-500 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">Estacionamento Pernoite</h3>
+                                <p class="text-sm text-gray-600">Guarde seu carro com segurança.</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-black text-white pt-12">
+        <div class="container mx-auto p-8 md:p-12">
+             </div>
+    </footer>
+    
+    <div id="service-modal-overlay" class="modal-overlay fixed inset-0 bg-black/70 z-[9998] hidden opacity-0 items-center justify-center p-4">
+        <div id="service-modal-content" class="modal-content bg-white text-gray-800 rounded-lg p-6 w-full max-w-md relative opacity-0 transform scale-95">
+            <button id="service-modal-close" class="absolute top-3 right-3 text-gray-400 hover:text-gray-800 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <h3 id="service-modal-title" class="text-2xl font-bold mb-2"></h3>
+            <p id="service-modal-price" class="font-semibold text-yellow-600 mb-4"></p>
+            <div class="border-t pt-4">
+                <p class="font-semibold mb-2">O que está incluso:</p>
+                <ul id="service-modal-details" class="list-disc list-inside space-y-1 text-gray-600"></ul>
+                <a id="service-modal-whatsapp-btn" href="#" target="_blank" class="btn mt-6 w-full inline-block bg-green-500 text-white font-bold uppercase py-3 px-8 tracking-widest rounded-sm text-center hover:bg-green-600">
+                    Agendar este Serviço
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

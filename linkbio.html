@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMCAR - Lava Rápido Premium em Jandira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'], 'heading': ['Poppins', 'sans-serif'], },
+                    colors: { 'brand-yellow': '#FFD700', 'dark-bg': '#101010', }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-gray-200 font-sans antialiased">
+
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="assets/images/bmcar-logo.png" alt="Logo da BMCAR" class="h-12 sm:h-14 md:h-16 w-auto">
+            </a>
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="servicos.html" class="nav-link hover:text-brand-yellow transition-colors duration-300 uppercase text-sm font-semibold tracking-wider">Serviços</a>
+                <a href="galeria.html" class="nav-link hover:text-brand-yellow transition-colors duration-300 uppercase text-sm font-semibold tracking-wider">Galeria</a>
+                <a href="parceiros.html" class="nav-link hover:text-brand-yellow transition-colors duration-300 uppercase text-sm font-semibold tracking-wider">Para Empresas</a>
+                <a href="trabalhe-conosco.html" class="nav-link hover:text-brand-yellow transition-colors duration-300 uppercase text-sm font-semibold tracking-wider">Trabalhe Conosco</a>
+            </nav>
+            <button id="mobile-menu-button" class="lg:hidden z-50"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-dark-bg/95 backdrop-blur-sm z-40 hidden flex-col items-center justify-center space-y-8 lg:hidden">
+        <a href="index.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Início</a>
+        <a href="servicos.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Serviços</a>
+        <a href="galeria.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Galeria</a>
+        <a href="parceiros.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Para Empresas</a>
+        <a href="trabalhe-conosco.html" class="nav-link mobile-menu-link text-2xl font-heading uppercase">Trabalhe Conosco</a>
+    </div>
+
+    <main>
+        <section class="relative h-screen flex flex-col justify-center text-center overflow-hidden">
+            <img src="assets/images/bmcar-fundo-hero.png" alt="Carro amarelo sendo lavado" class="absolute inset-0 w-full h-full object-cover z-0">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <div class="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center h-full pt-16 sm:pt-0">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-heading font-black uppercase tracking-wider text-white">
+                    BMCAR <br class="sm:hidden"> Lava Rápido em <span class="text-brand-yellow">Jandira</span>
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-gray-300 font-light">
+                    Excelência em estética automotiva. Da lavagem técnica à higienização completa, com a comodidade do nosso sistema leva e traz.
+                </p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="https://wa.me/5511933167736?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+agendar+um+hor%C3%A1rio." target="_blank" class="btn btn-yellow inline-block bg-brand-yellow text-black font-bold uppercase py-3 px-6 text-sm sm:text-base tracking-widest rounded-full text-center">
+                        Agendar Agora
+                    </a>
+                    <a href="servicos.html" class="btn btn-white nav-link inline-block bg-white text-black font-bold uppercase py-3 px-6 text-sm sm:text-base tracking-widest rounded-full text-center">
+                        Nossos Serviços
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white pt-12">
+        <div class="container mx-auto p-8 md:p-12">
+            </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
