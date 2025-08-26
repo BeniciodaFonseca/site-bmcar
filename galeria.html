@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Serviços | BMCAR Lava Rápido</title>
+    <meta name="description" content="Veja a qualidade do nosso trabalho em detalhes. Fotos de lavagens, higienizações e mais na nossa galeria de serviços.">
+    <link rel="icon" type="image/png" href="imagens/novo-favicon>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'], 'heading': ['Poppins', 'sans-serif'] },
+                    colors: { 'brand-yellow': '#FFD700', 'dark-bg': '#101010' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-gray-200 font-sans antialiased">
+
+    <header class="bg-black shadow-lg fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="imagens/bmcar-logo.png" alt="Logo da BMCAR" class="h-12 sm:h-14 w-auto">
+            </a>
+            <div class="hidden lg:flex items-center gap-6">
+                <nav class="flex items-center space-x-8">
+                    <a href="index.html#services" class="nav-link-page">Serviços</a>
+                    <a href="index.html#partners" class="nav-link-page">Para Empresas</a>
+                    <a href="galeria.html" class="nav-link-page text-brand-yellow font-bold">Galeria</a>
+                    <a href="index.html#team" class="nav-link-page">Trabalhe Conosco</a>
+                    <a href="index.html#contact" class="nav-link-page">Contato</a>
+                </nav>
+                <div class="flex items-center gap-5 border-l border-gray-700 pl-6">
+                    <a href="https://www.instagram.com/bmcarlavarapido/" target="_blank" title="Nosso Instagram" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                    <a href="https://share.google/gQM42LPo4Ow9VT2Tz" target="_blank" title="Nosso Perfil no Google" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-google text-xl"></i></a>
+                    <a href="https://www.google.com/maps/dir//R.+Jo%C3%A3o+Del+Moura,+326+-+Vila+Eunice,+Jandira+-+SP,+06602-150/@-23.5343788,-46.900306,17z/data=!4m18!1m8!3m7!1s0x94cf014e061075b1:0xbfd69ec2f30f9790!2sR.+Jo%C3%A3o+Del+Moura,+326+-+Vila+Eunice,+Jandira+-+SP,+06602-150!3b1!8m2!3d-23.5343788!4d-46.8977311!16s%2Fg%2F11y64wtptt!4m8!1m0!1m5!1m1!1s0x94cf014e061075b1:0xbfd69ec2f30f9790!2m2!1d-46.8977311!2d-23.5343788!3e2?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" title="Nosso Endereço no Google Maps" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="map-pin" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+            <button id="mobile-menu-button-gallery" class="lg:hidden z-50">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu-gallery" class="fixed inset-0 bg-dark-bg/95 backdrop-blur-sm z-40 hidden flex-col items-center justify-center space-y-8 lg:hidden">
+        <a href="index.html#services" class="mobile-menu-link">Serviços</a>
+        <a href="index.html#partners" class="mobile-menu-link">Para Empresas</a>
+        <a href="galeria.html" class="mobile-menu-link text-brand-yellow">Galeria</a>
+        <a href="index.html#team" class="mobile-menu-link">Trabalhe Conosco</a>
+        <a href="index.html#contact" class="mobile-menu-link">Contato</a>
+    </div>
+
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-4 pt-16">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-heading font-extrabold uppercase">Nossa <span class="text-brand-yellow">Galeria</span></h1>
+                <p class="text-lg text-gray-400 mt-2">O resultado do nosso cuidado em cada detalhe.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="imagens/galeria/estabelecimento/patio-lavagem-carros-bmcar-jandira.png"Jeep Renegade com espuma de neve" class="portfolio-image"></div>
+                <div class="gallery-item"><img src="imagens/galeria/veiculos/entrega-carro-limpo-vw-polo-bmcar.png" alt="Fachada do lava-rápido BMCAR" class="portfolio-image"></div>
+                <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-audi-etron-preto-bmcar.png"SUV marrom durante lavagem detalhada" class="portfolio-image"></div>
+                <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-audi-q5-verde-bmcar.png" alt="Pátio do estacionamento com carros" class="portfolio-image"></div>
+                <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-audi-q8-preto-bmcar.png" alt="Carros no pátio ao entardecer" class="portfolio-image"></div>
+                <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-caminhonete-ranger-espuma-bmcar.png" alt="Entrada do estacionamento BMCAR" class="portfolio-image"></div>
+                <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-chevrolet-cruze-bmcar.png" alt="Visão ampla do pátio e área de lavagem" class="portfolio-image"></div>
+                <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-chevrolet-tracker-preto-bmcar.png" alt="Carros estacionados no pátio" class="portfolio-image"></div>
+                 <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-dodge-ram-preta-bmcar.png" alt="Carros estacionados no pátio" class="portfolio-image"></div>
+                  <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-mercedes-cinza-bmcar.png" alt="Carros estacionados no pátio" class="portfolio-image"></div>
+                   <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-mini-cooper-bmcar.png" alt="Carros estacionados no pátio" class="portfolio-image"></div>
+                   <div class="gallery-item"><img src="imagens/galeria/veiculos/lavagem-frota-caminhoes-bmcar.png" alt="Carros estacionados no pátio" class="portfolio-image"></div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#" id="back-to-top-button" class="btn btn-yellow">
+                    <i data-lucide="arrow-up" class="inline-block mr-2 h-4 w-4"></i>Voltar ao Topo
+                </a>
+            </div>
+
+        </div>
+    </main>
+    
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-[9999] hidden items-center justify-center p-4">
+        <span id="lightbox-close" class="absolute top-5 right-8 text-white text-5xl font-bold cursor-pointer">×</span>
+        <img id="lightbox-image" src="" alt="Imagem ampliada do portfólio" class="block">
+    </div>
+
+    <footer class="bg-black text-white pt-12 mt-16">
+        <div class="container mx-auto p-8 md:p-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-center sm:text-left">
+                <div class="lg:col-span-2 space-y-4 flex flex-col items-center sm:items-start">
+                    <a href="index.html"><img src="https://i.imgur.com/xXlsuxL.png" alt="Logótipo da BMCAR Lava Rápido" class="h-20 w-auto"></a>
+                    <p class="text-sm text-gray-400 max-w-xs">O cuidado que seu veículo merece, com a qualidade que você confia.</p>
+                </div>
+                <div class="sm:col-start-1 lg:col-start-auto">
+                    <h3 class="font-bold text-lg text-white">Navegação</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition-colors">Nossos Serviços</a></li>
+                        <li><a href="index.html#partners" class="text-gray-400 hover:text-white transition-colors">Para Empresas</a></li>
+                        <li><a href="index.html#team" class="text-gray-400 hover:text-white transition-colors">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 lg:col-span-2">
+                     <h3 class="font-bold text-lg text-white">Contato e Horários</h3>
+                     <div class="mt-4 space-y-3 text-sm text-gray-400">
+                         <p class="flex items-center justify-center sm:justify-start gap-2"><i data-lucide="clock" class="w-4 h-4 flex-shrink-0"></i> <span>Ter-Sáb: 08h-18h | Dom: 08h-14h</span></p>
+                         <p class="flex items-center justify-center sm:justify-start gap-2"><i data-lucide="phone" class="w-4 h-4"></i> <a href="tel:+5511933167736" class="hover:text-white transition-colors">(11) 93316-7736</a></p>
+                         <p class="flex items-start justify-center sm:justify-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 mt-1 flex-shrink-0"></i> <a href="https://www.google.com/maps/dir//R.+Jo%C3%A3o+Del+Moura,+326+-+Vila+Eunice,+Jandira+-+SP,+06602-150/@-23.5343788,-46.900306,17z/data=!4m18!1m8!3m7!1s0x94cf014e061075b1:0xbfd69ec2f30f9790!2sR.+Jo%C3%A3o+Del+Moura,+326+-+Vila+Eunice,+Jandira+-+SP,+06602-150!3b1!8m2!3d-23.5343788!4d-46.8977311!16s%2Fg%2F11y64wtptt!4m8!1m0!1m5!1m1!1s0x94cf014e061075b1:0xbfd69ec2f30f9790!2m2!1d-46.8977311!2d-23.5343788!3e2?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">R. João Del Moura, 326 - Vila Eunice, Jandira - SP</a></p>
+                     </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="font-bold text-lg text-white text-center md:text-left">Aceitamos</h3>
+                    <div class="mt-4 flex justify-center md:justify-start items-center gap-8 text-gray-400">
+                        <div class="flex items-center gap-2"><i data-lucide="credit-card" class="w-6 h-6"></i><span>Cartões</span></div>
+                        <div class="flex items-center gap-2"><i class="fa-brands fa-pix text-2xl" style="color: #63E6BE;"></i><span>Pix</span></div>
+                        <div class="flex items-center gap-2"><i data-lucide="hand-coins" class="w-6 h-6"></i><span>Dinheiro</span></div>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="font-bold text-lg text-white">Acompanhe de Perto</h3>
+                    <p class="text-sm text-gray-400 mt-2 mb-4">Veja nosso trabalho e o que os clientes dizem.</p>
+                    <div class="flex justify-center md:justify-end items-center gap-6">
+                        <a href="https://www.instagram.com/bmcarlavarapido/" target="_blank" class="social-icon" aria-label="Siga-nos no Instagram"><i class="fa-brands fa-instagram text-3xl"></i></a>
+                        <a href="https://share.google/gQM42LPo4Ow9VT2Tz" target="_blank" class="social-icon" aria-label="Veja nossas avaliações no Google"><i class="fa-brands fa-google text-3xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p class="order-2 md:order-1 mt-4 md:mt-0">© 2024 BMCAR Lava Rápido. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
